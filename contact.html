@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Asif Shaik – Operations &amp; Accounts Specialist</title>
+  <meta name="description" content="Get in touch with Asif Shaik for operations leadership, order coordination, or reconciliation work.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <escape><link rel="stylesheet" href="contact_form.css"></escape>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="glow glow--emerald" aria-hidden="true"></div>
+  <div class="glow glow--cyan" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" aria-label="Main">
+    <div class="navbar__inner container">
+      <a class="brand" href="index.html">
+        <span class="brand__logo">AS</span>
+        <span class="brand__text">
+          <strong>Asif Shaik</strong>
+          <small>Operations &amp; Accounts</small>
+        </span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#metrics">Metrics</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li class="nav-links__cta">
+          <a class="btn btn--outline is-current" href="contact.html" aria-current="page">
+            <span class="material-symbols-outlined" aria-hidden="true">send</span>Get in touch
+          </a>
+        </li>
+      </ul>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="container page">
+    <main id="main" class="contact">
+
+      <!-- Back link -->
+      <div class="contact__top">
+        <a class="back-link" href="index.html">
+          <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>Back to portfolio
+        </a>
+        <span class="status-pill"><span class="status-pill__dot"></span>Replies within 24 hours</span>
+      </div>
+
+      <!-- Heading -->
+      <section class="contact__intro">
+        <span class="status-pill"><span class="status-pill__dot"></span>Open for opportunities &amp; advisory</span>
+        <h1>Let’s connect and collaborate.</h1>
+        <p>
+          Reach out about operations leadership, client order coordination, account reconciliation,
+          or cross-functional consulting for fast-moving teams.
+        </p>
+      </section>
+
+      <!-- Form card -->
+      <section class="card form-card" aria-labelledby="form-title">
+        <div class="form-card__head">
+          <div>
+            <p class="form-card__eyebrow"><span class="dot"></span>Contact form</p>
+            <h2 id="form-title">Send a message</h2>
+          </div>
+          <span class="form-card__tag">Reply within 24 hours</span>
+        </div>
+
+        <form id="contactForm" novalidate>
+          <!-- Nature of engagement -->
+          <fieldset class="field field--choices">
+            <legend class="field__label">Nature of engagement <span class="field__hint">Select one</span></legend>
+            <div class="choices">
+              <input type="radio" name="inquiry_type" id="inq-ops" value="Operations Leadership" checked>
+              <label for="inq-ops"><span>Operations leadership</span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span></label>
+
+              <input type="radio" name="inquiry_type" id="inq-orders" value="Order Coordination">
+              <label for="inq-orders"><span>Order coordination</span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span></label>
+
+              <input type="radio" name="inquiry_type" id="inq-accounts" value="Reconciliation / Audit">
+              <label for="inq-accounts"><span>Reconciliation / audit</span><span class="material-symbols-outlined" aria-hidden="true">check_circle</span></label>
+            </div>
+          </fieldset>
+
+          <!-- Name + email -->
+          <div class="field-row">
+            <div class="field">
+              <label class="field__label" for="fullName">Full name <span class="req" aria-hidden="true">*</span></label>
+              <div class="input-wrap">
+                <input id="fullName" name="fullName" type="text" placeholder="e.g. Rachel Sterling" autocomplete="name" required>
+                <span class="material-symbols-outlined" aria-hidden="true">person</span>
+              </div>
+              <p class="field__error" id="err-fullName" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="emailAddress">Email <span class="req" aria-hidden="true">*</span></label>
+              <div class="input-wrap">
+                <input id="emailAddress" name="emailAddress" type="email" placeholder="name@organization.com" autocomplete="email" required>
+                <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+              </div>
+              <p class="field__error" id="err-emailAddress" role="alert"></p>
+            </div>
+          </div>
+
+          <!-- Subject -->
+          <div class="field">
+            <label class="field__label" for="subjectInput">Subject</label>
+            <div class="input-wrap">
+              <input id="subjectInput" name="subjectInput" type="text" placeholder="e.g. Q3 ERP reconciliation or Senior Operations Specialist role">
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="field">
+            <div class="field__label field__label--split">
+              <label for="messageBody">Message <span class="req" aria-hidden="true">*</span></label>
+              <span class="counter" id="charCounter" aria-live="off">0 / 800</span>
+            </div>
+            <div class="input-wrap">
+              <textarea id="messageBody" name="messageBody" rows="5" maxlength="800" placeholder="Share the scope, team size, timeline, or anything else that helps me reply with the right details." required></textarea>
+            </div>
+            <p class="field__error" id="err-messageBody" role="alert"></p>
+          </div>
+
+          <!-- Honeypot: real visitors never see or fill this -->
+          <div class="hp" aria-hidden="true">
+            <label for="website">Leave this field empty</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-actions">
+            <p class="privacy"><span class="material-symbols-outlined" aria-hidden="true">lock</span>Your details are only used to reply to your message.</p>
+            <button class="btn btn--primary btn--submit" id="submitBtn" type="submit">
+              <span class="btn__label">Send message</span>
+              <span class="material-symbols-outlined btn__icon" aria-hidden="true">send</span>
+            </button>
+          </div>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+    
+      </section>
+
+      <!-- Quick links -->
+      <section class="card quick">
+        <div class="quick__text">
+          <span class="quick__logo"></span>
+          <div>
+            <strong>Need something faster?</strong>
+            <p>Review my experience, or send a direct email.</p>
+          </div>
+        </div>
+        <div class="quick__actions">
+          <a class="btn btn--secondary" href="index.html#experience"><span class="material-symbols-outlined" aria-hidden="true">work_history</span>View experience</a>
+          <a class="btn btn--primary" href="mailto:asifshaikemail@gmail.com?subject=Direct%20Inquiry"><span class="material-symbols-outlined" aria-hidden="true">mail</span></a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__links">
+        <span>Connect:</span>
+        <a class="chip-link" href="https://linkedin.com/in/asifshaik4142a816" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="chip-link" href="mailto:asifshaikemail@gmail.com">asifshaikemail@gmail.com</a>
+        <a class="chip-link" href="tel:+919840933911">+91 9840933911</a>
+      </div>
+      <p>&copy; 2026 Asif Shaik (S Mohamed Asif) &bull; Operations &amp; Accounts Specialist. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Success / error toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden>
+    <span class="toast__icon"><span class="material-symbols-outlined" id="toastIcon" aria-hidden="true">check_circle</span></span>
+    <div>
+      <strong id="toastTitle">Message received</strong>
+      <p id="toastText">Asif will reply within 24 hours.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>
