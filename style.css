@@ -73,6 +73,8 @@ img { max-width: 100%; display: block; }
   width: 100%;
   max-width: 64rem;
   margin-inline: auto;
+   margin-top: 0 !important;
+    padding-top: 0 !important;
   padding-inline: 1.25rem;
 }
 
@@ -329,6 +331,7 @@ button:focus-visible,
 .hero {
   display: grid;
   gap: 2rem;
+  margin-top: 1.5rem;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid var(--border-strong);
 }
